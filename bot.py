@@ -176,14 +176,14 @@ async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_html(
         f"Привет, <b>{html.escape(user.first_name or user.username or 'инвестор')}</b>! 👋\n"
-        "Я — помощник-инвестор eToroTrade. Скажи, чего хочешь добиться — машину, доход, свободу или путешествия?",
+        "Я — ваш помощник в мире инвестиций. Я помогу вам разобраться в мире инвестиций, с чего хотели бы начать?",
         reply_markup=kb,
     )
 
 
 async def help_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Просто пиши — я расскажу, как eToro помогает начать инвестировать. /worker для админа")
-
+    await update.message.reply_text("Просто пиши — я расскажу, как начать инвестировать")
+1
 
 async def worker_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
